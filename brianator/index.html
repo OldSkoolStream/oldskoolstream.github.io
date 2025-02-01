@@ -1,10 +1,30 @@
 <html>
 	<head>
 		<title>Brianator</title>
+		<script type="module">
+			import {BrianatorView} from './js/view.mjs';
+			const opts = {
+				audio: document.getElementById('audio'),
+				audioSrc: document.getElementById('source'),
+				control: document.getElementById('mic'),
+				log: document.getElementById('log')
+			};
+			const view = new BrianatorView(opts);
+
+		</script>
+		<style>
+			audio {
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
+		<audio id="audio" controls="">
+			<source id="source" type="audio/wav" />
+		</audio>
 		<h1>Brianator</h1>
-		<div>Future home of a STT-TTS voice changer</div>
+		<button id="mic">Record</button>
+		<div id="log"></div>
 	</body>
 </html>
 
