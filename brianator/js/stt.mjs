@@ -1,7 +1,7 @@
 
 class SpeechToText {
     constructor() {
-        const SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
+        const SpeechRecognition = SpeechRecognition ?? webkitSpeechRecognition;
         const rec =  new SpeechRecognition();
         rec.continuous = true;
         rec.interimResults = true;
