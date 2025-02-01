@@ -1,0 +1,104 @@
+body {
+    background-color: #222;
+    display: grid;
+    color: #ddd;
+    font-family: sans-serif;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "a b"
+        ". b";
+    min-width: 700px;
+}
+
+.header {
+    background-color: #000;
+    border: 1px solid #444;
+    border-radius: 20px;
+    flex: 0 0 auto;
+    grid-area: a;
+    margin: 20px;
+    padding: 10px;
+    width: 180px;
+}
+
+h1 {
+    flex: 0 0 auto;
+    text-align: center;
+}
+
+#mic {
+    background-color: #333;
+    border: 1px solid #444;
+    border-radius: 40px;
+    color: #888;
+    display: block;
+    flex: 0 0 auto;
+    height: 80px;
+    margin: 0px auto;
+    width: 80px;
+}
+
+#mic i {
+    font-size: 40px;
+}
+
+#mic.live {
+    border-color: #070;
+    color: #afa;
+}
+
+#log-container {
+    background-color: #000;
+    border: 1px solid black;
+    border-radius: 10px;
+    grid-area: b;
+    margin: 20px;
+    overflow: auto;
+    scrollbar-width: none;
+    scrollbar-gutter: stable;
+}
+
+#log {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+}
+
+.recording {
+    background-color: #111;
+    border: 1px solid #444;
+    border-radius: 10px;
+    margin: 20px 10px 0 10px;
+    padding: 1em;
+}
+
+.recording.live {
+    background-color: #030;
+}
+
+.recording-line {
+    display: none;
+    color: #777;
+    font-style: italic;
+}
+
+.recording.live .recording-line {
+    display: block;
+}
+
+.recording-line.final {
+    display: block;
+    color: #ddd;
+    font-style: normal;
+    font-weight: bold;
+}
+
+.recording-line.playing {
+    color: #afa;
+    font-weight: bold;
+}
+
+.footer {
+    padding: 10px;
+}

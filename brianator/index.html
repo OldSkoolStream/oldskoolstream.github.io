@@ -1,15 +1,19 @@
 <html>
 	<head>
 		<title>Brianator</title>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
 		<script type="module">
 			import {BrianatorView} from './js/view.mjs';
 			const opts = {
 				audio: document.getElementById('audio'),
 				audioSrc: document.getElementById('source'),
 				control: document.getElementById('mic'),
-				log: document.getElementById('log')
+				log: document.getElementById('log'),
+				logContainer: document.getElementById('log-container')
 			};
 			const view = new BrianatorView(opts);
+			view.initialize();
 
 		</script>
 		<style>
@@ -22,9 +26,13 @@
 		<audio id="audio" controls="">
 			<source id="source" type="audio/wav" />
 		</audio>
-		<h1>Brianator</h1>
-		<button id="mic">Record</button>
-		<div id="log"></div>
+		<div class="header">
+			<h1>BRIANator 5000</h1>
+			<button id="mic"><i class="material-icons">mic</i></button>
+		</div>
+		<div id="log-container">
+			<div id="log"></div>
+		</div>
 	</body>
 </html>
 
