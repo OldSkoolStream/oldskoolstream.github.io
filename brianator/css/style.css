@@ -102,3 +102,19 @@ h1 {
 .footer {
     padding: 10px;
 }
+
+.tip {
+    background-color: #300;
+    border-radius: 10px;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.disclaimer {
+    color: #777;
+    font-style: italic;
+    margin: 20px;
+}
